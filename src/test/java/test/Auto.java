@@ -18,12 +18,12 @@ public class Auto {
         return con;
     }
 
-    String verificarIntegridad(){
+    void verificarIntegridad(){
         for(Asiento a:asientos){
-            if(a instanceof Asiento && motor.registro==a.registro && a.registro==this.registro){
-                return "Auto original";
+            if(a instanceof Asiento && motor.registro==a.registro && a.registro==registro){
+                System.out.println("Auto original");
             }
         }
-        return "Las piezas no son originales";
+        System.out.println("Las piezas no son originales");
     }
 }
