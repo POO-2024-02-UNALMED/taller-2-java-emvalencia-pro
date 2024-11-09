@@ -19,14 +19,11 @@ public class Auto {
     }
 
     String verificarIntegridad(){
-        String v=null;
         for(Asiento a:asientos){
             if(a instanceof Asiento && (motor.registro!=a.registro | a.registro!=registro)){
-                v="Las piezas no son originales";
-            }else{
-                v="Auto original";
+                return "Las piezas no son originales";
             }
         }
-        return v;
+        return "Auto original";
     }
 }
